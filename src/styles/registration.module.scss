@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800;900&family=Poppins&display=swap");
+.container {
+  font-family: "Poppins";
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.input_felx{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1rem;
+     input {
+        padding: 14px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background: #f6f3f3;
+      }
+      span{
+        color: red;
+      }
+      select{
+        padding: 14px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background: #f6f3f3;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+      }
+
+}
+.btn_container {
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 10px;
+  border: 1px solid #888787;
+  background-color: #888787;
+  margin-top: 3rem;
+}
+.register_btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+}
+.otp_container{
+    width: 100%;
+    background-color: #f3f1f1;
+    border-radius: 10px;
+    input{
+        width: 69%;
+    }
+    button{
+        margin-top: 3px;
+        margin-bottom: 3px;
+        width: 30%;
+        padding: 9px;
+        border-radius: 10px;
+        border: 1px solid #888787;
+        background-color: #888787;
+        color: #fff;
+    }
+}
+
+
+.age_container{
+    display: flex;
+    width: 100%;
+    input{
+        width: 100%;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    select{
+        width: 100%;
+        padding: 14px;
+        outline: none;
+        border: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background: #f6f3f3;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-left: 1px solid #ccc;
+      }
+
+}
+.flex_box{
+    display: flex;
+    
+}
