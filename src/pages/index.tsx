@@ -318,6 +318,3 @@ const Registration = () => {
 };
 
 export default Registration;
-function setTimer(arg0: (timer: any) => any): void {
-  throw new Error("Function not implemented.");
-}
