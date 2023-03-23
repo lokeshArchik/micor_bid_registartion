@@ -6,35 +6,33 @@
   padding: 20px;
 }
 
-
-.input_felx{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-top: 1rem;
-     input {
-        padding: 14px;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        background: #f6f3f3;
-      }
-      span{
-        color: red;
-      }
-      select{
-        padding: 14px;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        background: #f6f3f3;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-      }
-
+.input_felx {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 1rem;
+  input {
+    padding: 14px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #f6f3f3;
+  }
+  span {
+    color: red;
+  }
+  select {
+    padding: 14px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #f6f3f3;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+  }
 }
 .btn_container {
   margin: 0 auto;
@@ -51,51 +49,88 @@
   width: 100%;
   padding: 8px;
   color: #fff;
+  cursor: pointer;
 }
-.otp_container{
+.register_btn_incative {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    color: #fff;
+  cursor: not-allowed;
+}
+.otp_container {
+  width: 100%;
+  background-color: #f3f1f1;
+  border-radius: 10px;
+  input {
+    width: 69%;
+  }
+  button {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 30%;
+    padding: 9px;
+    border-radius: 10px;
+    border: 1px solid #888787;
+    background-color: #888787;
+    color: #fff;
+  }
+}
+.otp_container_inactive{
     width: 100%;
     background-color: #f3f1f1;
     border-radius: 10px;
-    input{
-        width: 69%;
+    input {
+      width: 69%;
     }
-    button{
-        margin-top: 3px;
-        margin-bottom: 3px;
-        width: 30%;
-        padding: 9px;
-        border-radius: 10px;
-        border: 1px solid #888787;
-        background-color: #888787;
-        color: #fff;
+    button {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      width: 30%;
+      padding: 9px;
+      border-radius: 10px;
+      border: 1px solid #888787;
+      background-color: #888787;
+      color: #fff;
+      cursor: not-allowed;
+      opacity: .4;
     }
 }
 
-
-.age_container{
-    display: flex;
+.age_container {
+  display: flex;
+  width: 100%;
+  input {
     width: 100%;
-    input{
-        width: 100%;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-    }
-    select{
-        width: 100%;
-        padding: 14px;
-        outline: none;
-        border: none;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        background: #f6f3f3;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-left: 1px solid #ccc;
-      }
-
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  select {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #f6f3f3;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-left: 1px solid #ccc;
+  }
 }
-.flex_box{
-    display: flex;
-    
+.flex_box {
+  display: flex;
+}
+.btn_container_inactive {
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 10px;
+  border: 1px solid #888787;
+  background-color: #888787;
+  margin-top: 3rem;
+  opacity: 0.4;
+  cursor: not-allowed;
 }
