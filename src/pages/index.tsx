@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Registration = () => {
   const [name, setname] = useState("");
   const [city, setCity] = useState("");
-  const [occupation, setOccupation] = useState("");
+  const [occupation, setOccupation] = useState("Salaried");
   const [mobileNumber, setMobileNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [experience, setExperience] = useState("No");
@@ -67,6 +67,17 @@ const Registration = () => {
   };
 
   const handleSubmit = async () => {
+    if (!handleValidation())
+      return toast.error("Enter Valid Details ", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     if (otp != verify)
       return toast.error("Enter Valid OTP ", {
         position: "top-right",
@@ -91,16 +102,14 @@ const Registration = () => {
       gender: gender,
       email_id: "",
     };
-
     const response = await net.post("/user/register", obj);
-
-
-    if (response && response?.data?.message.includes('User Created Successfully')) {
+    if (
+      response &&
+      response?.data?.message.includes("User Created Successfully")
+    ) {
       handleModal();
       setTimeout(() => window.location.reload(), 2200);
-    }
-    else {
-
+    } else {
     }
   };
 
@@ -108,7 +117,21 @@ const Registration = () => {
     setOpen(!open);
     setTimeout(() => setOpen(false), 2000);
   };
-
+  const handleValidation = () => {
+    if (
+      mobileNumber &&
+      age &&
+      gender &&
+      city &&
+      occupation &&
+      mobileNumber &&
+      experience
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   const Modal = () => {
     return (
       <div className={Styles.modal_container}>
@@ -215,7 +238,13 @@ const Registration = () => {
               <label htmlFor="mobile_number">
                 Mobile Number <span>*</span>
               </label>
-              <div className={!mobileNumber? Styles.otp_container_inactive :  Styles.otp_container }>
+              <div
+                className={
+                  !mobileNumber
+                    ? Styles.otp_container_inactive
+                    : Styles.otp_container
+                }
+              >
                 <input
                   onChange={(e) => setMobileNumber(e.target.value)}
                   type="tel"
@@ -225,7 +254,11 @@ const Registration = () => {
                   name="mobile_number"
                   required
                 />
-                <button   disabled={!mobileNumber} type="button" onClick={genrateOTP}>
+                <button
+                  disabled={!mobileNumber}
+                  type="button"
+                  onClick={genrateOTP}
+                >
                   Sent OTP
                 </button>
               </div>
@@ -301,11 +334,17 @@ const Registration = () => {
             </>
           )}
         </div>
-        <div className={!otp? Styles.btn_container_inactive : Styles.btn_container }>
+        <div
+          className={
+            !otp ? Styles.btn_container_inactive : Styles.btn_container
+          }
+        >
           <button
             type="button"
             onClick={handleSubmit}
-            className={!otp? Styles.register_btn_incative  :Styles.register_btn }
+            className={
+              !otp ? Styles.register_btn_incative : Styles.register_btn
+            }
             disabled={!otp}
           >
             Register
